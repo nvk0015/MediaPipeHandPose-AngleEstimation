@@ -32,14 +32,12 @@ class HandsDetector():
                     self.mpDraw.DrawingSpec(color=(0,255,0),thickness=2,circle_radius=3))
         return image
 
-        
-
 def main():
     cTime=0  #current time
     pTime=0 # pastime
     #os.mkdir('OutputImages')
     cap = cv2.VideoCapture(0)
-    detector, results = HandsDetector()
+    detector = HandsDetector()
     while True:
         success, frame = cap.read()
         image = detector.findHands(frame)

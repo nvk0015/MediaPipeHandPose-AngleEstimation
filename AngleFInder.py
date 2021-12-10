@@ -24,3 +24,9 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 cv2.destroyAllWindows()
+
+
+img = cv2.imread('test.jpg')
+print(img)
+
+#location = detector.LeftRightClassifier(img)
